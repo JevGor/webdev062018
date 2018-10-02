@@ -1,0 +1,53 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'mywork'
+
+block scripts 
+
+block content
+  section.hero
+  //- include
+  section.mywork 
+    p my work 
+
+  section.portfolio
+    .portfolio__col-right
+      .project__desc
+        h2.project-name Webpage 1
+        .technologies html css js
+        .go-to__project
+          a(href="/mywork.html")
+          img(src="", alt='alt-icon')
+
+    .portfolio__col-left
+
+  section.reviews
+    h2.reviews-title what people say about me
+    .reviews-wrapper
+      .review-col__right
+        .review-breaks
+          img(src="assest/images/icons", alt='Jev Goronin')
+          p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, natus voluptate. Suscipit quam quidem, nemo soluta vel sit alias amet velit voluptates beatae perspiciatis, autem eos saepe molestias maiores culpa.
+        .reviewer-info
+          .reviewer-avatar
+            img(src="assets/images/content/user.jpg", alt='Jev Goronin')
+          .user-info
+            .reviewer-name
+              p User name
+            .reviewer-jobTitle
+              p User title
+      .review-col__left
+        .review-breaks
+          img(src="", alt='Jev Goronin')
+          p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, natus voluptate. Suscipit quam quidem, nemo soluta vel sit alias amet velit voluptates beatae perspiciatis, autem eos saepe molestias maiores culpa.
+        .reviewer-info
+          .reviewer-avatar
+            img(src="assets/images/content/user.jpg", alt='Jev Goronin')
+          .user-info
+            .reviewer-name
+              p User name
+            .reviewer-jobTitle
+              p User title
+    
+  section.feedback-form

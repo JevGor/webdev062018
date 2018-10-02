@@ -1,0 +1,31 @@
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+}
+
+.socials__item {
+    height: 25px;
+    width: 25px;
+    color: white;
+}
+
+.socials__item:hover {
+    color: aquamarine;
+}
+
+.socials__link_vk {
+    background: url("assets/images/icon/vk.svg") center center no-repeat;
+}
+
+.socials__link_gh {
+
+}
+
+.socials__link_in {
+
+}

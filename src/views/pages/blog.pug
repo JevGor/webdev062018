@@ -1,0 +1,55 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'blog'
+
+block content
+    .blog
+        section.blog__hero
+            //- include ../common/header.pug
+            .blog-intro__container
+                .blog__img
+                    img(src="assets/images/content/user.jpg", alt='Jev Goronin')
+                .section__name blog
+                .section__subtitle My articles
+            //- button.btn.btn-arrow.hero-arrow
+            //-     span.visuallyhidden Next section
+            //-     +icon("arrow")
+        .blog-body
+            section.blog__main
+                aside.aside.blog__main-left
+                    ul.aside-menu
+                        li.aside-menu__item
+                            a(herf="#article1").aside-menu__link Article 1
+                        li.aside-menu__item
+                            a(herf="#article2").aside-menu__link Article 2
+                        li.aside-menu__item
+                            a(herf="#article2").aside-menu__link Article 3
+
+            section.blog__main-right
+                article.article-blog    
+                    .article-blog__header
+                        h2.article-blog__header Article 1
+                        time(datetime='2018-09-25').article-blog__date 2018-09-25
+                    .artcicle-blog__content
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae rerum totam officia qui aliquid, quos itaque temporibus laborum atque sint pariatur blanditiis ipsa a laboriosam nemo dicta corporis facilis eaque.
+                        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, eaque? Voluptatibus sit, eos velit praesentium repellendus delectus sint ab sunt placeat, iusto fuga provident quaerat corrupti necessitatibus amet. Eligendi, ad!
+                article.article-blog    
+                    .article-blog__header
+                        h2.article-blog__header Article 2
+                        time(datetime='2018-09-25').article-blog__date 2018-09-25
+                    .artcicle-blog__content
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae rerum totam officia qui aliquid, quos itaque temporibus laborum atque sint pariatur blanditiis ipsa a laboriosam nemo dicta corporis facilis eaque.
+                        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, eaque? Voluptatibus sit, eos velit praesentium repellendus delectus sint ab sunt placeat, iusto fuga provident quaerat corrupti necessitatibus amet. Eligendi, ad!
+                article.article-blog    
+                    .article-blog__header
+                        h2.article-blog__header Article 3
+                        time(datetime='2018-09-25').article-blog__date 2018-09-25
+                    .artcicle-blog__content
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae rerum totam officia qui aliquid, quos itaque temporibus laborum atque sint pariatur blanditiis ipsa a laboriosam nemo dicta corporis facilis eaque.
+                        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, eaque? Voluptatibus sit, eos velit praesentium repellendus delectus sint ab sunt placeat, iusto fuga provident quaerat corrupti necessitatibus amet. Eligendi, ad!
+
+            include ../common/footer.pug
+        
+
+

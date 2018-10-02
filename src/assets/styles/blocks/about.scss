@@ -1,0 +1,91 @@
+.about {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    height: 850px;
+}
+
+.about__col {
+    width: 50%;
+    height: 100%;
+}
+
+.about__col_bg_white {
+    background: #efeee9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about__title {
+    text-transform: uppercase;
+    color: #455a64;
+    margin-bottom: 60px;    
+    &:first-child {
+        text-transform: uppercase;
+    }
+}
+
+.user-desc__pic {
+    height: 440px;
+    width: 440px;
+}
+
+
+.user-desc__info {
+    height: 345px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.user-desc__title {
+    color: #455a64;
+}
+
+.about__col_bg_beige {
+    background: #eeebdf;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about__right-title {
+    color: #455a64;
+    height: 220px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contacts__underlay {
+    // background: url("assets/images/content/map.jpg") center center no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.contacts__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+}
+
+.triangles {
+    content:'';
+    display: block;
+}

@@ -1,10 +1,100 @@
-extends ../main.layout.pug
-
-block variables
-  - var title = 'Обо мне'
-
-block scripts
-  script(src='about.bundle.js')
+extends ../auth.layout.pug
 
 block content
-  h1 Страничка "Обо Мне"  
+  section.header
+    ul.socials
+      - var socials = ['vk','gh','in']
+      each item in socials
+        li.socials__item
+          a(href="" class='socials__link_${item}').soclials__link
+
+  section.hero
+    .hero__container
+      .section-title
+        .user
+          .user__avater
+            img(src="assets/images/content/user.jpg", alt="").user-desc__pic-elem
+          .user__info
+            .user__name Jev Goronin
+            .user__desc Personal website
+    .hero__btn
+      .arrow-down
+  
+  section.about
+    .about__col.about__col_bg_white
+      .about__triangle.svg-triangle_fill-white
+      .about-desc
+        .about__title
+          h2.title About me
+        .user-desc__pic
+          img(src="assets/images/content/user-full.jpg", alt="").user-desc__pic-elem
+        .user-desc__info
+          h2.user-desc__title
+            .subtitle Who am Iframe
+          .user-desc__text
+            p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta aperiam placeat nostrum, veritatis saepe dolores sed nulla asperiores suscipit in sint temporibus sequi itaque voluptates, enim iure amet eum quaerat!
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere tenetur aperiam ipsam mollitia voluptatem totam odio, quisquam labore atque ex optio, expedita, libero quasi adipisci vitae rem deserunt aspernatur repudiandae.
+
+
+
+    .about__col.about__col_bg_beige
+      .about__triangle.svg-triangle_fill-beige
+      .about__right-title
+        .subtitle Who am I
+        .about__small-desc
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam fugit minima adipisci amet, earum voluptates magni obcaecati, doloribus id sequi omnis officiis. Magnam architecto earum necessitatibus at. Inventore, unde ab.
+        .about__info-container
+          ul.skills
+            -
+              var skills = [
+                ['Frontend', ['html','css','js']],
+                ['Backend', ['nodejs','Mongo']],
+                ['Workflow', ['git', 'gulp','webpack']],
+              ]
+            each item in skills 
+              li.skills__item
+                .skills-row
+                  .skills-row__tittle #{item[0]}
+                  ul.skills-row__list
+                    each skill in item[1]
+                      li.skills-row__item
+                        svg.skill #{skill}
+
+  section.contacts
+    .contacts__underlay
+      .google-map
+      .contacts__container
+        .user-data
+          .user-data__title
+            .subtitle Contacts
+          .user-data__container
+              ul.user-contacts-list              
+                each item in ['skype','mail','phone']
+                  li.user-contacts-list__item
+                  .contact-cell
+                    .contacts-cell__icon
+                    .contacts-cell__title #{item} 
+  
+  footer.footer
+    .footer-row.footer-row_border_bottom
+      .footer-col
+        nav.menu
+          ul.menu__list
+            each item in ['My work','About','Blog','Sign-in']
+              li.menu__item
+                a.menu__link #{item}
+      .footer-col.footer-col_justify-right
+        ul.socials.socials-rounded
+          - var socials = ['vk','gh','in']
+          each item in socials
+            li.socials__item
+              a(href="" class='socials__link_${item}').soclials__link
+
+    .footer-row
+      .footer-col
+        .copyright
+          p Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+      .footer-col.footer-col_justify-right
+        .copyright
+          p Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+

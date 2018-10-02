@@ -1,6 +1,27 @@
 extends ../auth.layout.pug
 
 block content
-  .hello-world
-    +icon('check', 'hello-world__block')
-    .inlined-svg
+  section.index
+    .sign-in-container
+      .sign-in__btn  Sing-in
+
+    .index-container
+      .index-look
+        .user__avater__intro
+          img(src="assets/images/content/user.jpg", alt="No picture sorry")
+        h1.index-name Jev Goronin
+        p.index-moto Personal webpage
+      .socials
+        ul.socilas-list
+      .index-nav   
+        ul.index-nav__menu     
+          li.nav-tab__my-work My work
+            a(href="/mywork.html")
+          li.nav-tab__about-me Abuot me
+            a(href="/about.html")
+          li.nav-tab__blog Blog
+            a(href="/blog.html")
+    
+    .index__copyright-container
+     .index__copyright
+        p copyleft
